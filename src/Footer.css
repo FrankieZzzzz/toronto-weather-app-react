@@ -1,0 +1,18 @@
+.Footer #button-sign {
+    font-family: Courier;
+    font-size: 12px;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 1%;
+}
+
+.Footer #button-sign a {
+    text-decoration: none;
+    color: rgb(147, 147, 147);
+    transition: all 300ms ease-in-out;
+}
+
+.Footer #button-sign a:hover {
+    color: #ec6e4c;
+    text-decoration: underline;
+}

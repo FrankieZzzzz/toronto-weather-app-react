@@ -1,5 +1,6 @@
 import './App.css';
 import Weather from "./Weather"
+import Footer from "./Footer"
 
 
 export default function App() {
@@ -7,6 +8,7 @@ export default function App() {
     <div className="App">
       <div>
         <Weather />
+        <Footer />
       </div>
     </div>
   );
