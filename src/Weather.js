@@ -3,23 +3,13 @@ import "./Weather.css";
 import axios from "axios";
 
 export default function _weather(){
+    const apiKey = "c5f0e59acac64258bb92ed027d20c68f";
     //search for city data
     const [triggle, setTriggle] = useState(false)
     const [localCityWeather, setLocalCityWeather] = useState(null)
-    let newUnit = "metric"
-    //get weather api 
-    navigator.geolocation.getCurrentPosition(_getCurrentLocation);
-    function _getCurrentLocation(position){
-        let latCode = position.coords.latitude;
-        let lonCode = position.coords.longitude;
-        let apiKey = "c5f0e59acac64258bb92ed027d20c68f";
-        let apiLocatUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latCode}&lon=${lonCode}&appid=${apiKey}&units=${newUnit ? newUnit : "metric"}`;
-        axios.get(apiLocatUrl).then(_displayLocation)
-        console.log();
-    }
+    
     //get weather api data
     function _displayLocation(response){
-        console.log(response.data);
         setTriggle(true);
         let iconCode = response.data.weather[0].icon;
         setLocalCityWeather({
@@ -34,7 +24,6 @@ export default function _weather(){
             cityPressure: response.data.main.pressure,
             cityTempDayMax: Math.round(response.data.main.temp_max),
             cityTempDayMin: Math.round(response.data.main.temp_min),
-
             })
     }
     
@@ -174,5 +163,16 @@ if (triggle) {
                 </ul>
             </section>
          </div>
-    )}
+    )}else{
+        let newUnit = "metric"
+        //get weather api 
+        navigator.geolocation.getCurrentPosition(_getCurrentLocation);
+        function _getCurrentLocation(position){
+            let latCode = position.coords.latitude;
+            let lonCode = position.coords.longitude;
+        
+            let apiLocatUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latCode}&lon=${lonCode}&appid=${apiKey}&units=${newUnit ? newUnit : "metric"}`;
+            axios.get(apiLocatUrl).then(_displayLocation)
+        }
+    }
 }
