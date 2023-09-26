@@ -31,7 +31,7 @@ export default function _weather(){
             })
     }
     
-if (localCityWeather.triggle === true) {
+if (localCityWeather.triggle) {
     return(
         <div>
             {/* Whole html return */}
@@ -45,7 +45,6 @@ if (localCityWeather.triggle === true) {
         function _getCurrentLocation(position){
             let latCode = position.coords.latitude;
             let lonCode = position.coords.longitude;
-        
             let apiLocatUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latCode}&lon=${lonCode}&appid=${apiKey}&units=${newUnit ? newUnit : "metric"}`;
             axios.get(apiLocatUrl).then(_displayLocation)
             return ("Loading....")
