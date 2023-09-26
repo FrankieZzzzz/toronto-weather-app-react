@@ -1,18 +1,21 @@
 import React, {useState} from "react";
 import "./Weather.css";
 import axios from "axios";
+import MomentTime from "./MomentTime"
 
 export default function _weather(){
     const apiKey = "c5f0e59acac64258bb92ed027d20c68f";
     //search for city data
-    const [triggle, setTriggle] = useState(false)
-    const [localCityWeather, setLocalCityWeather] = useState(null)
+    // const [triggle, setTriggle] = useState(false)
+    //simplify the code, insert variable to useState
+    const [localCityWeather, setLocalCityWeather] = useState({triggle:false})
     
     //get weather api data
     function _displayLocation(response){
-        setTriggle(true);
+        // console.log(response.data);
         let iconCode = response.data.weather[0].icon;
         setLocalCityWeather({
+            triggle: true,
             cityTemp: Math.round(response.data.main.temp),
             cityWind: response.data.wind.speed,
             cityHumidity: response.data.main.humidity,
@@ -24,10 +27,11 @@ export default function _weather(){
             cityPressure: response.data.main.pressure,
             cityTempDayMax: Math.round(response.data.main.temp_max),
             cityTempDayMin: Math.round(response.data.main.temp_min),
+            dataToFormat: response.data.dt * 1000,
             })
     }
     
-if (triggle) {
+if (localCityWeather.triggle) {
     return(
          <div class="container row mx-auto p-0 mt-5">
             <section id="weather-box-left" className="col-lg-3 mt-3">
@@ -58,12 +62,14 @@ if (triggle) {
                         </span>{" "}
                         Feels Like: {localCityWeather.feelTemp}<span id="weather-feeling-temp"></span>°
                     </li>
-                    <li>
+                    <li className="d-flex ">
                         <span class="material-symbols-outlined leftSideIcon">
                             {" "}
                             calendar_month{" "}
                         </span>
-                        <span id="weather-current-date"></span>
+                        <div className="mt-1 ms-1">
+                            <MomentTime date="MMMM Do YYYY" time="h:mm:ss A"/>
+                        </div>
                     </li>
                     <li id="weather-box-left-date">
                         <div id="current-date"></div>
@@ -76,7 +82,7 @@ if (triggle) {
                     <span id="insertCityName"></span>
                 </div>
             </section>
-            <section id="weather-box-right" class="container col-lg-9 row m-0">
+            <section id="weather-box-right" className="container col-lg-9 row m-0">
                 <nav id="weather-box-right-top">
                     <p class="col-5" id="brand-logo-name">Toronto Forecast</p>
                     <div class="col-lg-4 right-top-small-title">
@@ -144,7 +150,7 @@ if (triggle) {
                 <ul class="weather-detail-list" id="secondList">
                     <li class="forecast-day mx-2 px-4 d-flex flex-column newbackground">
                         <p class="forecast-detail">Weather Description</p>
-                        <p>
+                        <p className="text-capitalize">
                             <span class="detail" id="weather-description">{localCityWeather.cityCondition}</span>
                         </p>
                     </li>
@@ -173,6 +179,7 @@ if (triggle) {
         
             let apiLocatUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latCode}&lon=${lonCode}&appid=${apiKey}&units=${newUnit ? newUnit : "metric"}`;
             axios.get(apiLocatUrl).then(_displayLocation)
+            return ("Loading....")
         }
     }
 }
