@@ -19,8 +19,5 @@ export default function Clock(props) {
             <span>{currentTime.format(props.date)}</span><br />          
             <span>{currentTime.format(props.time)}</span>
         </div>
-        
     );
-
 }
-// {currentTime.format('h:mm:ss A')}
