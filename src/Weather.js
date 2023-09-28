@@ -4,7 +4,6 @@ import axios from "axios";
 import WeatherDataL from "./WeatherDataL";
 import WeatherDataR from "./WeatherDataR";
 
-
 export default function _weather(){
     //search for city data
     // const [triggle, setTriggle] = useState(false)
@@ -13,20 +12,22 @@ export default function _weather(){
     const apiKey = "c5f0e59acac64258bb92ed027d20c68f";
     
     const [localCityWeather, setLocalCityWeather] = useState({triggle:false})
-
     const [searchCityName, setSearchCityName] = useState(null)
-
-
 
     function _submitForm(event){
         event.preventDefault();
-        _displayLocation()
-
+        // Check if searchCityName is not null or empty
+        if (searchCityName){
+             // Make the API call with the searchCityName
+            let apiLocatUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchCityName}&appid=${apiKey}&units=${newUnit ? newUnit : "metric"}`;
+            axios.get(apiLocatUrl).then(_displayLocation)
+        }
     }
+
+    //get input value
     function _getSearchValue(event){
         setSearchCityName(event.target.value)
     }
-
 
     //get weather api data
     function _displayLocation(response){
@@ -48,12 +49,11 @@ export default function _weather(){
             })
     }
     
-
-
-    if (localCityWeather.triggle === true && searchCityName == null) {
+    if (localCityWeather.triggle) {
         return(
             <div class="container row mx-auto p-0 mt-5">
                 {/* Whole html return */}
+                {/* left section */}
                 <div className="col-lg-3 mt-3" id="weather-box-left">
                     {/* seperate search engine */}
                     <form action="" method="get" class="mb-3 ms-2" id="search-form" onSubmit={_submitForm}>
@@ -66,16 +66,15 @@ export default function _weather(){
                             </button>
                         </div>
                     </form>
+                    {/* rest of the left side content */}
                     <WeatherDataL data={localCityWeather}/>
                 </div>
+                {/* right section */}
                 <div className="container col-lg-9 row m-0" id="weather-box-right">
                     <WeatherDataR data={localCityWeather}/>
                 </div>
             </div>
-        )}else if(localCityWeather.triggle === true || searchCityName !== null){
-                let apiLocatUrl = `https://api.openweathermap.org/data/2.5/weather?q=${searchCityName}&appid=${apiKey}&units=${newUnit ? newUnit : "metric"}`;
-                axios.get(apiLocatUrl).then(_displayLocation)
-        }else{
+        )}else{
             //get weather api 
             navigator.geolocation.getCurrentPosition(_getCurrentLocation);
             function _getCurrentLocation(position){
