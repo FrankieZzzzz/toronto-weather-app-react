@@ -6,7 +6,6 @@ import MomentTime from "./MomentTime"
 export default function WeatherDataL(props){
     return (
         <div>
-            
             {/* data display area */}
             <div id="current-location">
                 <span id="current-city">{props.data.cityLocalName}</span>
