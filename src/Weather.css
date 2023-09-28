@@ -118,12 +118,17 @@ body {
     color: #48484A;
     margin-left: 10%;
 }
-
-#weather-box-left-img {
-    width: 50%;
-    margin: 0px auto;
-    padding-top: 8%;
+#weather-box{
+    width: 85%;
+    display: flex;
+    justify-content: center;
+}
+#weather-box canvas {
+    width: 30%;
+    margin: 0 auto;
+    padding-top: 17%;
     image-resolution: 300dpi;
+
 }
 
 .leftSideIcon {

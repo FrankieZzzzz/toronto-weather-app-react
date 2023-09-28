@@ -31,13 +31,16 @@ export default function _weather(){
 
     //get weather api data
     function _displayLocation(response){
-        let iconCode = response.data.weather[0].icon;
+            console.log(response.data);
+
+        // let iconCode = response.data.weather[0].icon;
         setLocalCityWeather({
             triggle: true,
             cityTemp: Math.round(response.data.main.temp),
             cityWind: response.data.wind.speed,
             cityHumidity: response.data.main.humidity,
-            cityIconSrc: `https://openweathermap.org/img/wn/${iconCode}@2x.png`,
+            // cityIconSrc: `https://openweathermap.org/img/wn/${iconCode}@2x.png`,
+            cityIconSrc: response.data.weather[0].icon,
             cityCondition: response.data.weather[0].description,
             cityLocalName: response.data.name,
             cityCountry: response.data.sys.country,

@@ -1,5 +1,6 @@
 import React from "react"
 import MomentTime from "./MomentTime"
+import WeatherIconSet from "./WeatherIconSet"
 
 // import axios from "axios";
 
@@ -11,7 +12,9 @@ export default function WeatherDataL(props){
                 <span id="current-city">{props.data.cityLocalName}</span>
                 <span id="current-country">{props.data.cityCountry}</span>
             </div>
-            <img src={props.data.cityIconSrc} alt="heroImg" id="weather-box-left-img" />
+            <div id="weather-box">
+                <WeatherIconSet iconset={props.data.cityIconSrc} alt={props.data.cityCondition}/>
+            </div>
             <ul class="fw-light d-flex" id="temp-list">
                 <li id="main-temp">{props.data.cityTemp}</li>
                 <li><span class="temp">|</span></li>
