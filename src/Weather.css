@@ -315,6 +315,9 @@ body {
     justify-content: center;
     align-items: center;
     margin-bottom: 5%;
+    width: 100%;
+    height: 30%;
+    border: 1px solid red;
 }
 
 .forecast-seven-day {
@@ -365,10 +368,10 @@ body {
 }
 
 .weather-detail-list {
-    margin: 0px;
     display: flex;
     align-items: flex-start;
     justify-content: center;
+    padding-left: 0px;
 }
 
 #secondList {
@@ -377,8 +380,9 @@ body {
 
 .weather-detail-list li {
     width: 30.5%;
-    height: 95%;
+    height: 180px;
     font-size: 13px;
+    margin: 0 8px;
 }
 
 .weather-detail-list li p {

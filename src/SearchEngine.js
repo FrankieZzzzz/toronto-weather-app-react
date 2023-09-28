@@ -1,19 +1,20 @@
 import React, {useState} from "react";
-import axios from "axios";
+// import axios from "axios";
 
 
 export default function SearchEngine(){
     const [cityValue, setCityValue] = useState()
 
-    function searchCity(){
-        let newUnit = "metric"
-        const apiKey = "c5f0e59acac64258bb92ed027d20c68f";
-        let apiLocatUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apiKey}&units=${newUnit ? newUnit : "metric"}`;
-        axios.get(apiLocatUrl).then(_displayLocation)
-    }
+    // function searchCity(){
+    //     let newUnit = "metric"
+    //     const apiKey = "c5f0e59acac64258bb92ed027d20c68f";
+    //     let apiLocatUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityValue}&appid=${apiKey}&units=${newUnit ? newUnit : "metric"}`;
+    //     axios.get(apiLocatUrl).then(_displayLocation)
+    // }
 
     function _submitForm(event){
         event.preventDefault()
+        // searchCity()
     }
     function _getSearchValue(event){
         setCityValue(event.target.value)
@@ -28,6 +29,7 @@ export default function SearchEngine(){
                     <i class="fa-solid fa-magnifying-glass ps-2" id="search-icon"></i>
                 </button>
             </div>
+            <div>{cityValue}</div>
         </form>
     )
 }
