@@ -82,26 +82,28 @@ body {
 }
 
 .temp {
-    font-size: 1vw;
-    position: relative;
+    font-size: 0.8vw;
+    /* position: relative;
     top: 22px;
-    left: 2px;
+    left: 2px; */
 }
 
 #temp-list {
-    padding-left: 18%;
+    padding-left: 29%;
     padding-top: 10%;
 }
 
 .temp-unit {
     color: rgb(147, 147, 147);
     text-decoration: none;
+    padding-top: 12%;
+    padding-left: 2%;
     cursor: pointer;
 }
-
-.temp-unit:hover {
-    text-decoration: underline;
+.temp-unit a{
+    text-decoration: none;
 }
+
 
 #temp-list .active {
     font-weight: 500;
@@ -116,7 +118,7 @@ body {
 #main-temp {
     font-size: 4vw;
     color: #48484A;
-    margin-left: 10%;
+    /* margin-left: 10%; */
 }
 #weather-box{
     width: 85%;
