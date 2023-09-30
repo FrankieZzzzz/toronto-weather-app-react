@@ -24,10 +24,11 @@ export default function weatherIconSet(props){
         "50n": "FOG"
     }
     return(
+        
        <ReactAnimatedWeather
             icon={codeMapping[[props.iconset]]}
-            color="#48484A"
-            size={65}
+            color="#a2afd8"
+            size={70}
             animate={true}
   />
     )

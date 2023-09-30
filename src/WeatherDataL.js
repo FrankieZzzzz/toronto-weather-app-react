@@ -2,6 +2,7 @@ import React from "react"
 import MomentTime from "./MomentTime"
 import WeatherIconSet from "./WeatherIconSet";
 import WeatherUnit from "./WeatherUnit"
+import ImageApi from "./ImageApi"
 
 // import axios from "axios";
 
@@ -17,16 +18,16 @@ export default function WeatherDataL(props){
                 <WeatherIconSet iconset={props.data.cityIconSrc} alt={props.data.cityCondition}/>
             </div>
             <WeatherUnit tempC={props.data.cityTemp}/>
-            <ul id="weather-box-left-detail" class="pt-2">
-                <li class="pt-4">
-                    <span class="material-symbols-outlined leftSideIcon">
+            <ul id="weather-box-left-detail" className="pt-2">
+                <li className="pt-4">
+                    <span className="material-symbols-outlined leftSideIcon">
                         {" "}
                         sentiment_satisfied{" "}
                     </span>{" "}
-                    Feels Like: {props.data.feelTemp}<span id="weather-feeling-temp"></span>°
+                    Feels Like: {props.data.feelTemp}<span id="weather-feeling-temp"></span>°C
                 </li>
                 <li className="d-flex ">
-                    <span class="material-symbols-outlined leftSideIcon">
+                    <span className="material-symbols-outlined leftSideIcon">
                         {" "}
                         calendar_month{" "}
                     </span>
@@ -36,12 +37,12 @@ export default function WeatherDataL(props){
                 </li>
                 <li id="weather-box-left-date">
                     <div id="current-date"></div>
-                    <div class="time-zone" id="current-time"></div>
+                    <div className="time-zone" id="current-time"></div>
                 </li>
             </ul>
             <hr id="left-side-line" />
-            <div class="weather-detail-img">
-                <img src="" alt="local-city" id="displayImgGalery" />
+            <div className="weather-detail-img">
+                <ImageApi cityName={props.data.cityLocalName}/>
                 <span id="insertCityName"></span>
             </div>
         </div>
