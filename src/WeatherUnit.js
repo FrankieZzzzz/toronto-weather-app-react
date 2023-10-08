@@ -24,9 +24,6 @@ export default function WeatherUnit(props){
     }else{
         return(
             <div className="fw-light d-flex" id="temp-list">
-            {/* <a href="#" class="temp temp-unit active" id="celsius">°C</a>
-            <span class="temp">|</span>
-            <a href="#" class="temp temp-unit" id="fahrenheit">°F</a> */}
             <span id="main-temp">{Math.round((props.tempC * 9) / 5 + 32)}</span>
             <span className="temp temp-unit"><a href="/" onClick={_unitConvertBack}>°C </a> | °F</span>
         </div>
