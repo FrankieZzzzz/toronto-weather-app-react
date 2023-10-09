@@ -23,7 +23,7 @@ export default function WeatherUnit(props){
     )
     }else{
         return(
-            <div className="fw-light d-flex" id="temp-list">
+        <div className="fw-light d-flex" id="temp-list">
             <span id="main-temp">{Math.round((props.tempC * 9) / 5 + 32)}</span>
             <span className="temp temp-unit"><a href="/" onClick={_unitConvertBack}>°C </a> | °F</span>
         </div>

@@ -18,22 +18,19 @@ export default function WeatherDataL(props){
                 <WeatherIconSet iconset={props.data.cityIconSrc} alt={props.data.cityCondition}/>
             </div>
             <WeatherUnit tempC={props.data.cityTemp}/>
-            <ul id="weather-box-left-detail" className="pt-2">
-                <li className="pt-4">
-                    <span className="material-symbols-outlined leftSideIcon">
-                        {" "}
-                        sentiment_satisfied{" "}
-                    </span>{" "}
-                    Feels Like: {props.data.feelTemp}<span id="weather-feeling-temp"></span>°C
+            <ul id="weather-box-left-detail" >
+                <li className="d-flex align-items-start">
+                    <span className="material-symbols-outlined leftSideIcon pe-1"> {" "}sentiment_satisfied{" "}</span>
+                    <span id="weather-feeling-temp">Feels Like: {props.data.feelTemp}°C</span>
                 </li>
-                <li className="d-flex ">
-                    <span className="material-symbols-outlined leftSideIcon">
+                <li className="d-flex align-items-start">
+                    <span className="material-symbols-outlined leftSideIcon  pe-1">
                         {" "}
                         calendar_month{" "}
                     </span>
-                    <div className="mt-1 ms-1">
+                    <span>
                         <MomentTime date="MMMM Do YYYY" time="h:mm:ss A"/>
-                    </div>
+                    </span>
                 </li>
                 <li id="weather-box-left-date">
                     <div id="current-date"></div>
@@ -43,7 +40,6 @@ export default function WeatherDataL(props){
             <hr id="left-side-line" />
             <div className="weather-detail-img">
                 <ImageApi cityName={props.data.cityLocalName}/>
-                <span id="insertCityName"></span>
             </div>
         </div>
             
