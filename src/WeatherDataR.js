@@ -12,15 +12,14 @@ export default function weatherDataR(props){
                     <span className="inputLocation"></span>
                 </div>
                 <Switch />
-                
             </nav>
             <div id="weather-forecast"></div>
             <p className="mb-0" id="weather-detail">
                 Weather Detail
             </p>
             <div id="weather-detail-box">
-                <ul className="weather-detail-list mb-3">
-                    <li className="forecast-day px-4 d-flex flex-column newbackground">
+                <ul className="weather-detail-list mb-1 d-flex flex-column">
+                    <li className="forecast-day px-3 d-flex flex-column newbackground">
                         <p className="forecast-detail">Humidity</p>
                         <p>
                             <span id="humidityData" className="detail">{props.data.cityHumidity}%</span>
@@ -60,8 +59,8 @@ export default function weatherDataR(props){
                         </p>
                     </li>
                 </ul>
-                <ul className="weather-detail-list" id="secondList">
-                    <li className="forecast-day px-4 d-flex flex-column newbackground">
+                <ul className="weather-detail-list d-flex flex-column mb-5" id="secondList">
+                    <li className="forecast-day px-3 d-flex flex-column newbackground">
                         <p className="forecast-detail">Weather Description</p>
                         <p className="text-capitalize">
                             <span className="detail" id="weather-description">{props.data.cityCondition}</span>

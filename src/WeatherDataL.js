@@ -19,16 +19,16 @@ export default function WeatherDataL(props){
             </div>
             <WeatherUnit tempC={props.data.cityTemp}/>
             <ul id="weather-box-left-detail" >
-                <li className="d-flex align-items-start">
+                <li className="d-flex">
                     <span className="material-symbols-outlined leftSideIcon pe-1"> {" "}sentiment_satisfied{" "}</span>
-                    <span id="weather-feeling-temp">Feels Like: {props.data.feelTemp}°C</span>
+                    <span id="weather-feeling-temp" className="pt-1">Feels Like: {props.data.feelTemp}°C</span>
                 </li>
-                <li className="d-flex align-items-start">
+                <li className="d-flex">
                     <span className="material-symbols-outlined leftSideIcon  pe-1">
                         {" "}
                         calendar_month{" "}
                     </span>
-                    <span>
+                    <span className="pt-1">
                         <MomentTime date="MMMM Do YYYY" time="h:mm:ss A"/>
                     </span>
                 </li>
