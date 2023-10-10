@@ -334,7 +334,7 @@ body {
 
 /* weather detail */
 #weather-detail {
-    width: 86%;
+    width: 100%;
     font-size: 18px;
     font-weight: 400;
     color: var(--font-color);
@@ -343,6 +343,7 @@ body {
 }
 /* weather detail box */
 .weather-detail-list {
+    width: 90vw;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -602,24 +603,20 @@ body {
 }
 @media only screen and (min-width: 992px){
     body {
-            width: 100vw;
-            height: 100vh;
-            font-family: 'Roboto', sans-serif;
-            background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(207, 214, 231) 90%);
-            background-repeat: no-repeat;
-        }
+        width: 100vw;
+        height: 100vh;
+    }
     
-        .container {
-            box-shadow: 1px 1px 32px 12px rgba(179, 179, 179, 0.1);
-            background: white;
-        }
-    
+    .container {
+        box-shadow: 1px 1px 32px 12px rgba(179, 179, 179, 0.1);
+        background: white;
+        display: flex;
+        flex-direction: row;
+    }
         /* **************** */
         /* leftside box */
         #weather-box-left {
             width: 100vw;
-            display: flex;
-            flex-direction: column;
         }
     
         #weather-box-left form {

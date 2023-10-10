@@ -69,10 +69,10 @@ export default function _weather(){
     
     if (localCityWeather.triggle) {
         return(
-            <div className="container row mx-auto p-0 mt-sm-5">
+            <div className="containter row mx-auto p-0 mt-sm-5">
                 {/* Whole html return */}
                 {/* left section */}
-                <section className="col-lg-3 mt-3" id="weather-box-left">
+                <section className="mt-3" id="weather-box-left">
                     {/* seperate search engine */}
                     <form action="" method="get" className="mb-3" id="search-form" onSubmit={_submitForm}>
                         <p className="col-5" id="topTitle">Toronto Forecast</p>
@@ -88,7 +88,7 @@ export default function _weather(){
                     <WeatherDataL data={localCityWeather} />
                 </section>
                 {/* right section */}
-                <section className="container col-lg-9 row m-0" id="weather-box-right">
+                <section className="container m-0" id="weather-box-right">
                     <WeatherDataR data={localCityWeather}/>
                 </section>
             </div>
