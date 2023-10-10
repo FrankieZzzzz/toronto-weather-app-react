@@ -5,7 +5,7 @@
 }
 body {
     width: 100vw;
-    height: 100vh;
+    height: max-content;
     font-family: 'Roboto', sans-serif;
     background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(207, 214, 231) 90%);
     background-repeat: no-repeat;
@@ -343,6 +343,7 @@ body {
 }
 /* weather detail box */
 .weather-detail-list {
+    width: 90vw;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -413,13 +414,15 @@ body {
     font-size: 15px;
     padding-left: 6px;
 }
-@media only screen and (min-width: 576px){
+@media only screen and (min-width: 576px) {
     body {
         height: max-content;
     }
+
     .container {
         border-radius: 20px;
     }
+
     /* search bar */
     #search-form div {
         position: relative;
@@ -427,22 +430,26 @@ body {
         height: 60%;
         margin: 16% auto 0% auto;
     }
+
     #data-clear-input {
         top: 14px;
         right: 72px;
     }
-    
+
     #search-bar {
         font-size: 13px;
         padding: 8px 22px;
     }
+
     /* city info */
     #current-location {
         padding-top: 15%;
     }
+
     #current-city {
         font-size: 7vw;
     }
+
     /* weather icon */
     #weather-box {
         display: flex;
@@ -452,40 +459,49 @@ body {
         width: 23%;
         padding-top: 12%;
     }
+
     /* whole temp and unit */
     #temp-list {
         width: 34%;
     }
+
     /* C temp style */
     .temp-unit {
         padding-top: 24%;
         font-size: 3.4vw;
     }
+
     #main-temp {
         font-size: 17vw;
     }
+
     /* feel like area */
     /* date icon */
     .leftSideIcon {
         font-size: 4.3vw;
     }
+
     #weather-box-left-detail {
         width: 50%;
         font-size: 3.5vw;
     }
+
     /* uplash image and city name */
     #displayImgGalery {
         height: 26vh;
     }
+
     #insertCityName {
         top: 45%;
         font-size: 5vw;
     }
+
     /* **************** */
     /* rightside box */
     .right-top-small-title {
         font-size: 12px;
     }
+
     #brand-logo-name {
         display: block;
         font-size: 20px;
@@ -494,6 +510,7 @@ body {
         color: #48484A;
         margin-bottom: 0em;
     }
+
     /* switch Btn */
     .switch-wrapper {
         width: 37%;
@@ -504,30 +521,36 @@ body {
         width: 3vw;
         height: 4vh;
     }
+
     /* weather detail */
     #weather-detail {
         font-size: 18px;
         margin-top: 12%;
     }
+
     .weather-detail-list li {
         width: 95%;
         font-size: 2.7vw;
         padding: 3% 0px;
     }
+
     .sunrise-set-time,
     #max-temp,
-    #min-temp, 
+    #min-temp,
     .detail,
     .timeUnit,
-    #weather-description{
+    #weather-description {
         font-size: 7vw;
     }
 }
-@media only screen and (min-width: 768px){
+
+@media only screen and (min-width: 768px) {
+
     /* search bar */
     #search-form div {
         width: 75%;
     }
+
     #data-clear-input {
         top: 22px;
         right: 95px;
@@ -536,61 +559,76 @@ body {
     #search-bar {
         font-size: 15px;
     }
+
     #current-city {
         font-size: 6vw;
     }
+
     #current-location {
         padding-top: 20%;
     }
+
     #weather-box canvas {
         width: 20%;
         padding-top: 12%;
     }
+
     /* whole temp and unit */
     #temp-list {
         width: 32%;
     }
+
     /* C temp style */
     .temp-unit {
         padding-top: 18%;
         font-size: 3vw;
     }
+
     #main-temp {
         font-size: 15vw;
     }
+
     /* feel like area */
     /* date icon */
     .leftSideIcon {
         font-size: 4vw;
     }
+
     #weather-box-left-detail {
         font-size: 3vw;
     }
+
     /* uplash image and city name */
     #displayImgGalery {
         height: 34vh;
     }
+
     /* **************** */
     /* rightside box */
     .right-top-small-title {
         font-size: 14px;
     }
+
     #brand-logo-name {
         font-size: 24px;
     }
+
     /* switch Btn */
     .switch-wrapper {
         width: 32%;
     }
+
     /* weather detail */
     #weather-detail {
         font-size: 18px;
         margin-top: 12%;
     }
+
     .weather-detail-list li {
         font-size: 2.2vw;
         padding: 5% 0px;
     }
+
     .sunrise-set-time,
     #max-temp,
     #min-temp,
@@ -600,27 +638,32 @@ body {
         font-size: 6vw;
     }
 }
-@media only screen and (min-width: 992px){
+
+@media only screen and (min-width: 992px) {
     body {
         width: 100vw;
         height: 100vh;
+        font-family: 'Roboto', sans-serif;
+        background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(207, 214, 231) 90%);
+        background-repeat: no-repeat;
     }
-    
+
     .container {
         box-shadow: 1px 1px 32px 12px rgba(179, 179, 179, 0.1);
         background: white;
     }
-     
-        /* **************** */
-        /* leftside box */
-        #weather-box-left {
-            width: 100vw;
-        }
-    
-        #weather-box-left form {
-            width: 100%;
-        }
 
+    /* **************** */
+    /* leftside box */
+    #weather-box-left {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #weather-box-left form {
+        width: 100%;
+    }
 }
 @media only screen and (min-width: 1200){
 
