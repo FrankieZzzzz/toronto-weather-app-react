@@ -334,7 +334,7 @@ body {
 
 /* weather detail */
 #weather-detail {
-    width: 100%;
+    width: 86%;
     font-size: 18px;
     font-weight: 400;
     color: var(--font-color);
@@ -343,7 +343,6 @@ body {
 }
 /* weather detail box */
 .weather-detail-list {
-    width: 90vw;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -610,9 +609,8 @@ body {
     .container {
         box-shadow: 1px 1px 32px 12px rgba(179, 179, 179, 0.1);
         background: white;
-        display: flex;
-        flex-direction: row;
     }
+     
         /* **************** */
         /* leftside box */
         #weather-box-left {
