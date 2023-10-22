@@ -1,5 +1,6 @@
 import React from "react";
 import Switch from "./Switch"
+import WeatherForecast from "./WeatherForecast"
 
 export default function weatherDataR(props){
     return(
@@ -13,7 +14,7 @@ export default function weatherDataR(props){
                 </div>
                 <Switch />
             </nav>
-            <div id="weather-forecast"></div>
+            <WeatherForecast cityCoord={props.coordinates}/>
             <p className="mb-0" id="weather-detail">
                 Weather Detail
             </p>

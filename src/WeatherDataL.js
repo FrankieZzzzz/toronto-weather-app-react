@@ -15,7 +15,7 @@ export default function WeatherDataL(props){
                 <span id="current-country">{props.data.cityCountry}</span>
             </div>
             <div id="weather-box">
-                <WeatherIconSet iconset={props.data.cityIconSrc} alt={props.data.cityCondition}/>
+                <WeatherIconSet iconset={props.data.cityIconSrc} alt={props.data.cityCondition} size={"70"} />
             </div>
             <WeatherUnit tempC={props.data.cityTemp}/>
             <ul id="weather-box-left-detail" >

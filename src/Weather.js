@@ -45,7 +45,6 @@ export default function _weather(){
     //get weather api data
     function _displayLocation(response){
         // let iconCode = response.data.weather[0].icon;
-        console.log(response.data);
         setLocalCityWeather({
             triggle: true,
             cityTemp: Math.round(response.data.main.temp),
@@ -63,6 +62,7 @@ export default function _weather(){
             dataToFormat: response.data.dt * 1000,
             sunRiseTime: convertUnixTimestampToTime(response.data.sys.sunrise), // Convert to formatted time
             sunSetTime: convertUnixTimestampToTime(response.data.sys.sunset), // Convert to formatted time
+            sendCityCoord: response.data.coord
             })
     }     
     
@@ -85,11 +85,11 @@ export default function _weather(){
                         </div>
                     </form>
                     {/* rest of the left side content */}
-                    <WeatherDataL data={localCityWeather} />
+                    <WeatherDataL data={localCityWeather}  />
                 </div>
                 {/* right section */}
                 <div className="container col-lg-9 row m-0" id="weather-box-right">
-                    <WeatherDataR data={localCityWeather}/>
+                    <WeatherDataR data={localCityWeather} coordinates={localCityWeather.sendCityCoord}/>
                 </div>
             </div>
         )}else{
