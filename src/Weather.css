@@ -466,8 +466,7 @@ body {
 body.night {
     background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
     color: #e1e1e1;
-    height: max-content;
-    background-repeat: no-repeat;
+    
     
 }
 
@@ -707,6 +706,11 @@ body.night .container #weather-box-right .weather-detail-list .forecast-day {
 }
 
 @media only screen and (max-width: 992px) {
+    body.night {
+        height: max-content;
+        background-repeat: no-repeat;
+    }
+    
     body{
         background-size: contain;
     }
