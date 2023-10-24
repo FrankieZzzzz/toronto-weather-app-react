@@ -24,7 +24,7 @@ export default function WeatherDataL(props){
                     <span id="weather-feeling-temp" className="pt-1 weather-box-left-feel">Feels Like: {props.data.feelTemp}°C</span>
                 </li>
                 <li className="d-flex ">
-                    <span className="material-symbols-outlined leftSideIcon  pe-1">
+                    <span className="material-symbols-outlined leftSideIcon  ">
                         {" "}
                         calendar_month{" "}
                     </span>

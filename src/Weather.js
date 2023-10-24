@@ -69,7 +69,7 @@ export default function _weather(){
     
     if (localCityWeather.triggle) {
         return(
-            <div className="container row mx-auto p-0 mt-5">
+            <div className="container row mx-auto p-0 mt-lg-5">
                 {/* Whole html return */}
                 {/* left section */}
                 <div className="mt-3 col-lg-3" id="weather-box-left">

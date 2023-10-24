@@ -11,7 +11,7 @@ body {
     margin-top: 20%;
     height: initial;
     background: white;
-}
+}   
 
 /* **************** */
 /* leftside box */
@@ -129,7 +129,7 @@ body {
 #weather-box canvas {
     width: 30%;
     margin: 0 auto;
-    padding-top: 17%;
+    padding-top: 15%;
     image-resolution: 300dpi;
 }
 .leftSideIcon {
@@ -142,7 +142,7 @@ body {
 }
 
 #left-side-line {
-    margin-top: 25%;
+    margin-top: 15%;
     opacity: 0.1;
 }
 
@@ -169,7 +169,7 @@ body {
 
 #displayImgGalery {
     width: 100%;
-    height: 15vh;
+    height: 13vh;
     object-position: 0% 35%;
     object-fit: cover;
     border-radius: 10px;
@@ -177,7 +177,7 @@ body {
 
 #weather-box-left-detail {
     margin-left: 10%;
-    font-size: 1vw;
+    font-size: 0.8vw;
     color: #48484A;
 }
 
@@ -202,6 +202,7 @@ body {
     justify-content: space-evenly;
     height: auto;
     background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(232, 237, 248) 90%);
+    background-repeat: no-repeat;
 }
 
 #weather-box-right-top {
@@ -464,7 +465,10 @@ body {
 /* dark mode */
 body.night {
     background: linear-gradient(112.1deg, rgb(32, 38, 57) 11.4%, rgb(63, 76, 119) 70.2%);
-    color: #e1e1e1
+    color: #e1e1e1;
+    height: max-content;
+    background-repeat: no-repeat;
+    
 }
 
 body.night .switch-wrapper .sun {
@@ -511,14 +515,13 @@ body.night .container #weather-box-right .weather-detail-list .forecast-day {
 /* Responsive */
 @media only screen and (max-width: 1400px) {
     body {
-            height: 100vh;
+        height: 100vh;
     }
     /* left side container */
     #search-form {
         width: 100%;
         margin-top: 16%;
     }
-
     #data-clear-input {
         top: 43px;
         right: 75px;
@@ -621,8 +624,9 @@ body.night .container #weather-box-right .weather-detail-list .forecast-day {
         padding-top: 5%;
     }
     #main-temp {
-        font-size: 7vw;
+        font-size: 6vw;
         color: #48484A;
+        padding-left: 20%;
     }
 
     #temp-list {
@@ -643,7 +647,7 @@ body.night .container #weather-box-right .weather-detail-list .forecast-day {
     }
 
     .leftSideIcon {
-        font-size: 1.4vw;
+        font-size: 1.8vw;
         position: relative;
         top: 3px;
     }
@@ -698,11 +702,14 @@ body.night .container #weather-box-right .weather-detail-list .forecast-day {
     }
 
     #weather-forecast {
-        height: 10%;
+        height: 25%;
     }
 }
 
 @media only screen and (max-width: 992px) {
+    body{
+        background-size: contain;
+    }
     .container {
         width: 100vw;
     }
@@ -884,6 +891,7 @@ body.night .container #weather-box-right .weather-detail-list .forecast-day {
 
     .container {
         width: 90%;
+        border-radius: 0px;
     }
 
     #search-bar {
@@ -907,7 +915,17 @@ body.night .container #weather-box-right .weather-detail-list .forecast-day {
     .temp {
         top: 12%;
     }
-
+    #temp-list{
+        text-align: center;
+    }
+    .temp-unit {
+        padding-top: 8%;
+    }
+    #main-temp {
+        font-size: 20vw;
+        width: 56%;
+        text-align: right;
+    }
     #weather-box-right {
         height: 100%;
         width: 100%;
@@ -917,7 +935,14 @@ body.night .container #weather-box-right .weather-detail-list .forecast-day {
         width: 80%;
         height: 20%;
     }
-
+    
+    #weather-box-left-detail,
+    #weather-box-left-date {
+        font-size: 4.2vw;
+    }
+        .leftSideIcon {
+            font-size: 4.7vw;
+        }
     #brand-logo-name {
         display: none;
     }
