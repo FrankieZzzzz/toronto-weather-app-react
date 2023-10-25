@@ -29,10 +29,6 @@ export default function WeatherDataL(props){
                         <MomentTime date="MMMM Do YYYY" time="h:mm:ss A"/>
                     </span>
                 </li>
-                <li id="weather-box-left-date">
-                    <div id="current-date"></div>
-                    <div className="time-zone" id="current-time"></div>
-                </li>
             </ul>
             <hr id="left-side-line" />
             <div className="weather-detail-img">

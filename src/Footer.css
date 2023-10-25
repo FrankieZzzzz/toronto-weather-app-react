@@ -17,3 +17,12 @@
     color: #ec6e4c;
     text-decoration: underline;
 }
+@media only screen and (min-width: 960px) {
+    .footer{
+        width: 90vw;
+        margin: 0px auto;
+    }
+    .footer #button-sign {
+    padding: 2% 0%;
+}
+}

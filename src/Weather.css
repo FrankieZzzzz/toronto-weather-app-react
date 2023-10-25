@@ -9,6 +9,8 @@ body {
     height: initial;
     background: white;
     padding: 0px;
+    display: block;
+    
 }
 /* **************** */
 /* leftside box */
@@ -124,8 +126,8 @@ body {
 }
 /* weather-box-left-detail */
 .leftSideIcon {
-    color: #48484A;
     color: #EC6E4C;
+    padding-bottom: 5%;
 }
 #weather-box-left-detail {
     font-size: 17px;
@@ -133,13 +135,17 @@ body {
 }
 #weather-box-left-detail li {
     padding-top: 15px;
+    padding-left: 15%;
 }
 #weather-box-left-detail li span{
     vertical-align:middle;
     padding-right: 5px;
 }
+.timeSheet{
+    display: inline-block;
+}
 #timeUpdate{
-    padding-left: 16%;
+    padding-left: 12%;
 }
 /* image api area */
 #left-side-line {
@@ -174,7 +180,6 @@ body {
     object-fit: cover;
     border-radius: 10px;
 }
-
 /* ***************************************** */
 /* rightside box */
 #weather-box-right {
@@ -212,6 +217,7 @@ body {
 /* switch Btn */
 .switch-wrapper {
     width: max-content;
+    height: max-content;
     display: flex;
     align-items: center;
 }
@@ -295,19 +301,19 @@ body {
     flex-direction: row;
     padding: 0px 10% 0px 0px;
 }
-#forecast-seven-day-detail p{
+#forecast-seven-day-detail > p{
     margin-bottom: 0px;
     padding-top: 8%;
     padding-right: 15%;
     font-size: 4vw;
 }
 /* weather detail humidity wind-speed ... */
-
 /* weather detail */
 #weather-detail {
-    width: 86%;
+    width: 90%;
     height: 5%;
-    font-size: 18px;
+    margin: 3% auto;
+    font-size: 3vw;
     font-weight: 400;
     color: #48484A;
     font-style: italic;
@@ -404,3 +410,256 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
     background: rgba(92, 103, 160, 0.132);
     box-shadow: 1px 1px 10px 5px rgba(18, 24, 45, 0.074);
 }
+
+@media only screen and (min-width: 768px) {
+    /* left side */
+    #search-form{
+        width: 80%;
+    }
+    #main-temp {
+        font-size: 14vw;
+    }
+    .leftSideIcon {
+        color: #EC6E4C;
+        padding-bottom: 5%;
+    }
+    #weather-box-left-detail {
+        width: 90%;
+        font-size: 17px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #timeUpdate {
+        padding-left: 10%;
+    }
+    /* image size */
+    #displayImgGalery {
+        height: 40vh;
+    }
+
+    /* right side */
+    /* seven days forecast */
+    #forecast-seven-day-detail > p {
+        font-size: 3vw;
+        padding-top: 0%;
+    }
+    .right-top-small-title {
+        display: block;
+        width: 20%;
+        font-size: 14px;
+        margin-bottom: 0em;
+    }
+    /* switch */
+    .switch-wrapper .moon,
+    .switch-wrapper .sun {
+        width: 3.5vw;
+        height: 4.8vh;
+    }
+    /* weather forecast 7 days*/
+    #weather-forecast {
+        margin-bottom: 12%;
+    }
+    #forecast-seven-day-detail {
+        display: flex;
+        flex-direction: row;
+        padding: 0px 10% 0px 0px;
+    }
+    #forecast-seven-day-detail canvas{
+        width: max-content;
+        height: max-content;
+    }
+    /* weather detail humidity wind-speed ... */
+    /* weather detail */
+    .forecast-detail {
+        font-size: 2vw;
+    }
+    .detail {
+        font-size: 5vw;
+    }
+}
+
+/* left-right side composition */
+@media only screen and (min-width: 960px) {
+    body {
+        width: 100vw;
+        background-repeat: no-repeat;
+        background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(3, 28, 88) 90%);
+    }
+    .conTainer {
+        width: 90%;
+        border-radius: 20px;
+        margin: 5% auto 0px auto;
+        display: grid;
+        grid-template-columns: 35% 65%;
+    }
+    /* **************** */
+    /* leftside box */
+    #weather-box-left {
+        box-shadow: 1px 1px 32px 12px rgba(111, 111, 111, 0.038);
+        justify-content: start;
+        padding-bottom: 3%;
+    }
+    /* search bar */
+    #search-form {
+        width: 85%;
+        margin-top: 14%;
+    }
+    #search-bar {
+        height: 35px;
+    }
+    #searchBtn-icon {
+        padding-left: 8%;
+    }
+
+    #weather-left-info {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }   
+    /* city info */
+    #current-location {
+        margin-top: 22%;
+    }
+    #current-city {
+        font-size: 3.5vw;
+        font-weight:normal;
+    }
+    /* weather icon */
+    #weather-box {
+        width: 55%;
+    }
+    #weather-box {
+        padding-top: 22%;
+    }
+    /* temp info */
+    #temp-list {
+        width: 80%;
+        padding-top: 12%;
+    }
+    #main-temp {
+        font-size: 6vw;
+        font-weight: 400;
+    }
+    .temp-unit {
+        font-size: 1.6vw;
+    }
+    /* weather-box-left-detail */
+    #weather-box-left-detail {
+        width: 90%;
+        font-size: 14px;
+        flex-direction: column;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+    }
+    #weather-box-left-detail li {
+        padding-left: 0%;
+        width: 100%;
+    }
+    .leftSideIcon {
+        padding-bottom: 4%;
+    }
+    #timeUpdate {
+        padding-left: 2%;
+    }
+    /* image api area */
+    #left-side-line {
+        margin-top: 8%;
+        margin-bottom: 8%;
+    }
+    .weather-detail-img {
+        width: 90%;
+    }
+    #insertCityName {
+        font-size: 2.8vw;
+    }
+    #displayImgGalery {
+        height: 150px;
+    }
+    /* ***************************************** */
+    /* rightside box */
+    #weather-box-right {
+        border-radius: 20px;
+        padding-top: 1%;
+        padding-bottom: 4%;
+    }
+    #weather-box-right-top {
+        width: 100%;
+        padding: 6% 3% 0%;
+    }
+    
+    #brand-logo-name {
+        font-size: 15px;
+    }
+    .right-top-small-title {
+        display: block;
+        width: 30%;
+        font-size: 11px;
+        margin-bottom: 0em;
+    }
+    /* switch */
+    .switch-wrapper .moon,
+    .switch-wrapper .sun {
+        width: 2vw;
+        height: 4.8vh;
+    }
+    /* ***************************************** */
+    /* 7 days forecast */
+    #weather-forecast {
+        margin-top: 5%;
+        grid-template-columns: repeat(4, 22.2%);
+        gap: 1.5%;
+        margin-bottom: 4%;
+    }
+    .forecast-seven-day {
+        flex-direction: column;
+        padding: 15% 5px;
+    }
+    #forecast-seven-day-detail {
+        flex-direction: column;
+        align-items: center;
+        padding: 0px;
+    }
+    #forecast-seven-day-detail>p {
+        margin-bottom: 15px;
+        padding-right: 0%;
+        font-size: 1.6vw;
+    }
+    #weather-forecast-temp{
+        padding-top:15%;
+        font-size: 1.2vw;
+    }
+    /* weather detail humidity wind-speed ... */
+    /* weather detail */
+    #weather-detail {
+        font-size: 15px;
+        margin: 3% auto;
+    }
+    .weather-detail-list {
+        width: 95%;
+        grid-template-columns: repeat(3, 33%);
+        margin: 0px auto;
+    }
+    .forecast-detail {
+        font-size: 1.4vw;
+        font-weight: 250;
+    }
+    .forecast-day {
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        height: 160px;
+        margin: 1.5% 3px;
+        padding: 8% 0% 0% 8%;
+    }
+    .detail {
+        font-size: 3.4vw;
+        font-weight: 100;
+    }
+        .material-symbols-outlined {
+            font-weight: 200;
+        }
+    }

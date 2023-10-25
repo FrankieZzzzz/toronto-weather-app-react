@@ -3,7 +3,6 @@ import "./Weather.css";
 import axios from "axios";
 import WeatherDataL from "./WeatherDataL";
 import WeatherDataR from "./WeatherDataR";
-import Footer from "./Footer";
 
 export default function _weather(){
     //search for city data
@@ -91,7 +90,7 @@ export default function _weather(){
                 <div  id="weather-box-right">
                     <WeatherDataR data={localCityWeather} coordinates={localCityWeather.sendCityCoord}/>
                 </div>
-                <Footer />
+                
             </div>
         )}else{
             //get weather api 
