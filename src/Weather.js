@@ -3,6 +3,7 @@ import "./Weather.css";
 import axios from "axios";
 import WeatherDataL from "./WeatherDataL";
 import WeatherDataR from "./WeatherDataR";
+import Footer from "./Footer";
 
 export default function _weather(){
     //search for city data
@@ -69,28 +70,28 @@ export default function _weather(){
     
     if (localCityWeather.triggle) {
         return(
-            <div className="container row mx-auto p-0 mt-lg-5">
+            <div className="conTainer">
                 {/* Whole html return */}
                 {/* left section */}
-                <div className="mt-3 col-lg-3" id="weather-box-left">
+                <div  id="weather-box-left">
                     {/* seperate search engine */}
-                    <form action="" method="get" className="mb-3" id="search-form" onSubmit={_submitForm}>
-                        <p className="col-5" id="topTitle">Toronto Forecast</p>
+                    <form action="" method="get" id="search-form" onSubmit={_submitForm}>
                         <div>
-                            <input type="text" className="border-0 rounded-5"id="search-bar" placeholder="Search for place"autoComplete="off" onChange={_getSearchValue}/>
+                            <input type="text" id="search-bar" placeholder="Search for place"autoComplete="off" onChange={_getSearchValue}/>
                             <span id="data-clear-input">&times;</span>
-                            <button id="searchBtn-icon">
-                                <i className="fa-solid fa-magnifying-glass ps-2" id="search-icon"></i>
-                            </button>
                         </div>
+                        <button id="searchBtn-icon">
+                            <i className="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                        </button>
                     </form>
                     {/* rest of the left side content */}
                     <WeatherDataL data={localCityWeather}  />
                 </div>
                 {/* right section */}
-                <div className="container col-lg-9 row m-0" id="weather-box-right">
+                <div  id="weather-box-right">
                     <WeatherDataR data={localCityWeather} coordinates={localCityWeather.sendCityCoord}/>
                 </div>
+                <Footer />
             </div>
         )}else{
             //get weather api 

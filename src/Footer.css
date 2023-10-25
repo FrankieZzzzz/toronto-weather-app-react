@@ -1,16 +1,19 @@
-.Footer #button-sign {
+
+.footer #button-sign {
     font-family: Courier;
     font-size: 11px;
     text-align: center;
+    padding: 5% 5%;
+    
 }
 
-.Footer #button-sign a {
+.footer #button-sign a {
     text-decoration: none;
     color: rgb(147, 147, 147);
     transition: all 300ms ease-in-out;
 }
 
-.Footer #button-sign a:hover {
+.footer #button-sign a:hover {
     color: #ec6e4c;
     text-decoration: underline;
 }

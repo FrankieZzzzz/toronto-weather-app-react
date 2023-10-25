@@ -4,7 +4,7 @@ import "./Footer.css";
 
 export default function Footer() {
   return (
-    <footer className="Footer">
+    <footer className="footer">
       <p id="button-sign">
         Loosely designed in <span>Figma</span> and coded in{" "}
         <span>Visual Studio Code</span>. Open sourced on{" "}

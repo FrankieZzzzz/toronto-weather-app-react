@@ -6,75 +6,74 @@ export default function weatherDataR(props){
     return(
         <div>
             <nav id="weather-box-right-top" >
-                <p className="col-5" id="brand-logo-name">Toronto Forecast</p>
-                <div className="col-lg-4 right-top-small-title">
-                    <i className="col-0 pe-2 fa-solid fa-location-dot"id="getCurrentLocation"></i>
+                <p id="brand-logo-name">Toronto Forecast</p>
+                <div className="right-top-small-title">
+                    <i className="fa-solid fa-location-dot"id="getCurrentLocation"></i>
                     <span className="cnBtn">Weather in {props.data.cityLocalName}</span>
                     <span className="inputLocation"></span>
                 </div>
                 <Switch />
             </nav>
             <WeatherForecast cityCoord={props.coordinates}/>
-            <p className="mb-0" id="weather-detail">
-                Weather Detail
-            </p>
-            <ul className="weather-detail-list mb-1 d-flex flex-lg-row">
-                <li className="forecast-day px-3 d-flex flex-column newbackground">
+            <p id="weather-detail"> Weather Detail </p>
+            <ul className="weather-detail-list">
+                <li className="forecast-day ">
                     <p className="forecast-detail">Humidity</p>
-                    <p>
-                        <span id="humidityData" className="detail">{props.data.cityHumidity}%</span>
+                    <p className="unit">
+                        <span id="forecast-detail-data" className="detail">{props.data.cityHumidity}%</span>
                     </p>
                 </li>
-                <li className="forecast-day px-3 d-flex flex-column newbackground">
+                <li className="forecast-day ">
                     <p className="forecast-detail">Temperature Max | Min</p>
-                    <p className="max-min-temp">
-                        <span className="material-symbols-outlined"> upgrade </span>:{" "}
-                        <span id="max-temp">{props.data.cityTempDayMax}</span>°C
-                    </p>
-                    <p className="max-min-temp">
-                        <span className="material-symbols-outlined" id="minTempUnit">
-                        {" "}
-                        upgrade{" "}
-                        </span>
-                        : <span id="min-temp">{props.data.cityTempDayMin}</span>°C
-                    </p>
+                    <div>
+                        <p className="max-min-temp unit">
+                            <span className="material-symbols-outlined"> upgrade </span>:{" "}
+                            <span id="forecast-detail-data" className="detail">{props.data.cityTempDayMax}</span>°C
+                        </p>
+                        <p className="max-min-temp unit">
+                            <span className="material-symbols-outlined" id="minTempUnit">upgrade</span>
+                            : <span id="min-temp" className="detail">{props.data.cityTempDayMin}</span>°C
+                        </p>
+                    </div>
                 </li>
-                <li className="forecast-day px-3 d-flex flex-column newbackground">
+                <li className="forecast-day newbackground">
                     <p className="forecast-detail">Sunrise & Sunset</p>
-                    <p>
-                        <span className="material-symbols-outlined sunriseIcon">
-                        {" "}
-                        wb_twilight{" "}
-                        </span>{" "}
-                        <span id="sunRise" className="sunrise-set-time"></span>{" "}
-                        <span className="timeUnit">{props.data.sunRiseTime}</span><span className="timeUnit_ampm">AM</span>
-                    </p>
-                    <p>
-                        <span className="material-symbols-outlined sunsetIcon">
-                        {" "}
-                        wb_twilight{" "}
-                        </span>{" "}
-                        <span id="sunSet" className="sunrise-set-time"></span>{" "}
-                        <span className="timeUnit">{props.data.sunSetTime}</span><span className="timeUnit_ampm">PM</span>
-                    </p>
+                    <div>
+                        <p>
+                            <span className="material-symbols-outlined sunriseIcon">
+                            {" "}
+                            wb_twilight{" "}
+                            </span>{" "}
+                            <span id="sunRise" className="sunrise-set-time"></span>{" "}
+                            <span className="timeUnit detail">{props.data.sunRiseTime}</span><span className="unit">AM</span>
+                        </p>
+                        <p>
+                            <span className="material-symbols-outlined sunsetIcon">
+                            {" "}
+                            wb_twilight{" "}
+                            </span>{" "}
+                            <span id="sunSet" className="sunrise-set-time"></span>{" "}
+                            <span className="timeUnit detail">{props.data.sunSetTime}</span><span className="unit">PM</span>
+                        </p>
+                    </div>
                 </li>
             </ul>
-            <ul className="weather-detail-list d-flex flex-lg-row" id="secondList">
-                <li className="forecast-day px-3 d-flex flex-column newbackground">
+            <ul className="weather-detail-list">
+                <li className="forecast-day ">
                     <p className="forecast-detail">Weather Description</p>
-                    <p className="text-capitalize">
+                    <p className="text-capitalize unit">
                         <span className="detail" id="weather-description">{props.data.cityCondition}</span>
                     </p>
                 </li>
-                <li className="forecast-day px-3 d-flex flex-column newbackground">
+                <li className="forecast-day ">
                     <p className="forecast-detail">Pressure</p>
-                    <p>
+                    <p className="unit">
                         <span id="weather-pressure" className="detail">{props.data.cityPressure}</span> hPa
                     </p>
                 </li>
-                <li className="forecast-day px-3 d-flex flex-column newbackground">
+                <li className="forecast-day ">
                     <p className="forecast-detail">Wind Speed</p>
-                    <p className="speedDetial">
+                    <p className="speedDetial unit">
                         <span className="detail" id="windData">{props.data.cityWind}</span> km/h
                     </p>
                 </li>

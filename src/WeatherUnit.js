@@ -16,14 +16,14 @@ export default function WeatherUnit(props){
     }
     if (unit === "cel"){
         return(
-        <div className="fw-light d-flex" id="temp-list">
+        <div id="temp-list">
             <span id="main-temp">{props.tempC}</span>
             <span className="temp temp-unit">°C | <a href="/" onClick={_unitConvert} >°F</a></span>
         </div>
     )
     }else{
         return(
-        <div className="fw-light d-flex" id="temp-list">
+        <div id="temp-list">
             <span id="main-temp">{Math.round((props.tempC * 9) / 5 + 32)}</span>
             <span className="temp temp-unit"><a href="/" onClick={_unitConvertBack}>°C </a> | °F</span>
         </div>

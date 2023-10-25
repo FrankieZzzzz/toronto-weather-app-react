@@ -15,9 +15,9 @@ export default function Clock(props) {
         }, []);
 
     return (
-        <div>
-            <span>{currentTime.format(props.date)}</span><br />          
-            <span>{currentTime.format(props.time)}</span>
-        </div>
+        <span>
+            <span>{currentTime.format(props.date)}</span> <br/>     
+            <span id="timeUpdate">{currentTime.format(props.time)}</span>
+        </span>
     );
 }

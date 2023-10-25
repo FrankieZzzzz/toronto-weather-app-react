@@ -8,27 +8,24 @@ import ImageApi from "./ImageApi"
 
 export default function WeatherDataL(props){
     return (
-        <div>
+        <div id="weather-left-info">
             {/* data display area */}
             <div id="current-location">
                 <span id="current-city">{props.data.cityLocalName}</span>
                 <span id="current-country">{props.data.cityCountry}</span>
             </div>
             <div id="weather-box">
-                <WeatherIconSet iconset={props.data.cityIconSrc} alt={props.data.cityCondition} size={"70"} />
+                <WeatherIconSet iconset={props.data.cityIconSrc} alt={props.data.cityCondition} size={"100"} />
             </div>
             <WeatherUnit tempC={props.data.cityTemp}/>
             <ul id="weather-box-left-detail" >
-                <li className="d-flex">
-                    <span className="material-symbols-outlined leftSideIcon pe-1"> {" "}sentiment_satisfied{" "}</span>
-                    <span id="weather-feeling-temp" className="pt-1 weather-box-left-feel">Feels Like: {props.data.feelTemp}°C</span>
+                <li>
+                    <span className="material-symbols-outlined leftSideIcon"> {" "}sentiment_satisfied{" "}</span>
+                    <span id="weather-feeling-temp" className=" weather-box-left-feel">Feels Like: {props.data.feelTemp}°C</span>
                 </li>
-                <li className="d-flex ">
-                    <span className="material-symbols-outlined leftSideIcon  ">
-                        {" "}
-                        calendar_month{" "}
-                    </span>
-                    <span className="pt-1">
+                <li>
+                    <span className="material-symbols-outlined leftSideIcon"> calendar_month </span>
+                    <span>
                         <MomentTime date="MMMM Do YYYY" time="h:mm:ss A"/>
                     </span>
                 </li>
