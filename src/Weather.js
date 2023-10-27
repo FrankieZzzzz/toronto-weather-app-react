@@ -97,8 +97,10 @@ export default function _weather(){
             navigator.geolocation.getCurrentPosition(_getCurrentLocation);
             function _getCurrentLocation(position){
                 let latCode = position.coords.latitude;
+                let roundLat = latCode.toFixed(2);
                 let lonCode = position.coords.longitude;
-                let apiLocatUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latCode}&lon=${lonCode}&appid=${apiKey}&units=${newUnit ? newUnit : "metric"}`;
+                let roundLon = lonCode.toFixed(2);
+                let apiLocatUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${roundLat}&lon=${roundLon}&appid=${apiKey}&units=${newUnit ? newUnit : "metric"}`;
                 axios.get(apiLocatUrl).then(_displayLocation)
                 return ("Loading....")
             }
