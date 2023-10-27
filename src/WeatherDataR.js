@@ -8,8 +8,8 @@ export default function weatherDataR(props){
             <nav id="weather-box-right-top" >
                 <p id="brand-logo-name">Toronto Forecast</p>
                 <div className="right-top-small-title">
-                    <i className="fa-solid fa-location-dot"id="getCurrentLocation"></i>
-                    <span className="cnBtn">Weather in {props.data.cityLocalName}</span>
+                    <i className="fa-solid fa-location-dot"id="getCurrentLocation"> </i>
+                    <span className="cnBtn"> Weather in {props.data.cityLocalName}</span>
                     <span className="inputLocation"></span>
                 </div>
                 <Switch />
