@@ -97,9 +97,9 @@ export default function _weather(){
             navigator.geolocation.getCurrentPosition(_getCurrentLocation);
             function _getCurrentLocation(position){
                 let latCode = position.coords.latitude;
-                let roundLat = latCode.toFixed(2);
+                let roundLat = latCode.toFixed(1);
                 let lonCode = position.coords.longitude;
-                let roundLon = lonCode.toFixed(2);
+                let roundLon = lonCode.toFixed(1);
                 let apiLocatUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${roundLat}&lon=${roundLon}&appid=${apiKey}&units=${newUnit ? newUnit : "metric"}`;
                 axios.get(apiLocatUrl).then(_displayLocation)
                 return ("Loading....")

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, {useState} from "react"
 import axios from "axios";
 
 export default function ImageApi(props){
@@ -11,8 +11,8 @@ export default function ImageApi(props){
     
     function _displayImg(response){
         setImgLink({
-            imgLinkUrl: response.data.results[2].urls.full,
-            imgDescribetion: response.data.results[2].description,
+            imgLinkUrl: response.data.results[1].urls.full,
+            imgDescribetion: response.data.results[1].description,
         })
     }
     return(

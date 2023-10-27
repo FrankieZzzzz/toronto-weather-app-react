@@ -26,7 +26,7 @@ export default function _weatherForecastDay(props){
         <div className="forecast-seven-day ">
             <div id="forecast-seven-day-detail">   
                 <p>{_date()}</p>
-                <WeatherIconSet iconset={props.dailyData.weather[0].icon} size={"38"}/>
+                <WeatherIconSet iconset={props.dailyData.weather[0].icon} iconSize={"38"}/>
             </div>
             <div id="weather-forecast-temp">
                 <span id="weather-temp-max">{_maxTemp()}°C</span> |
