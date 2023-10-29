@@ -19,13 +19,13 @@ export default function weatherDataR(props){
             <ul className="weather-detail-list">
                 <li className="forecast-day ">
                     <p className="forecast-detail">Humidity</p>
-                    <p className="unit">
+                    <p className="unit content">
                         <span id="forecast-detail-data" className="detail">{props.data.cityHumidity}%</span>
                     </p>
                 </li>
                 <li className="forecast-day ">
                     <p className="forecast-detail">Temperature Max | Min</p>
-                    <div>
+                    <div className="content">
                         <p className="max-min-temp unit">
                             <span className="material-symbols-outlined"> upgrade </span>:{" "}
                             <span id="forecast-detail-data" className="detail">{props.data.cityTempDayMax}</span>°C
@@ -38,7 +38,7 @@ export default function weatherDataR(props){
                 </li>
                 <li className="forecast-day newbackground">
                     <p className="forecast-detail">Sunrise & Sunset</p>
-                    <div>
+                    <div className="content">
                         <p>
                             <span className="material-symbols-outlined sunriseIcon">
                             {" "}
@@ -61,19 +61,19 @@ export default function weatherDataR(props){
             <ul className="weather-detail-list">
                 <li className="forecast-day ">
                     <p className="forecast-detail">Weather Description</p>
-                    <p className="text-capitalize unit">
+                    <p className="text-capitalize unit content">
                         <span className="detail" id="weather-description">{props.data.cityCondition}</span>
                     </p>
                 </li>
                 <li className="forecast-day ">
                     <p className="forecast-detail">Pressure</p>
-                    <p className="unit">
+                    <p className="unit content">
                         <span id="weather-pressure" className="detail">{props.data.cityPressure}</span> hPa
                     </p>
                 </li>
                 <li className="forecast-day ">
                     <p className="forecast-detail">Wind Speed</p>
-                    <p className="speedDetial unit">
+                    <p className="speedDetial unit content">
                         <span className="detail" id="windData">{props.data.cityWind}</span> km/h
                     </p>
                 </li>
