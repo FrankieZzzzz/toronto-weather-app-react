@@ -3,6 +3,8 @@ import "./Weather.css";
 import axios from "axios";
 import WeatherDataL from "./WeatherDataL";
 import WeatherDataR from "./WeatherDataR";
+import Footer from "./Footer";
+
 
 export default function _weather(){
     //search for city data
@@ -77,29 +79,31 @@ export default function _weather(){
     
     if (localCityWeather.triggle) {
         return(
-            <div className="conTainer">
-                {/* Whole html return */}
-                {/* left section */}
-                <div  id="weather-box-left">
-                    {/* seperate search engine */}
-                    <form action="" method="get" id="search-form" onSubmit={_submitForm}>
-                        <div>
-                            <input type="text" id="search-bar" placeholder="Search for place"autoComplete="off" onChange={_getSearchValue} onClick={_showXIcon}/>
-                            <span id="data-clear-input">&times;</span>
-                        </div>
-                        <button id="searchBtn-icon">
-                            <i className="fa-solid fa-magnifying-glass" id="search-icon"></i>
-                        </button>
-                    </form>
-                    {/* rest of the left side content */}
-                    <WeatherDataL data={localCityWeather}  />
+            <div>
+                <div className="conTainer">
+                    {/* Whole html return */}
+                    {/* left section */}
+                    <div  id="weather-box-left">
+                        {/* seperate search engine */}
+                        <form action="" method="get" id="search-form" onSubmit={_submitForm}>
+                            <div>
+                                <input type="text" id="search-bar" placeholder="Search for place"autoComplete="off" onChange={_getSearchValue} onClick={_showXIcon}/>
+                                <span id="data-clear-input">&times;</span>
+                            </div>
+                            <button id="searchBtn-icon">
+                                <i className="fa-solid fa-magnifying-glass" id="search-icon"></i>
+                            </button>
+                        </form>
+                        {/* rest of the left side content */}
+                        <WeatherDataL data={localCityWeather}  />
+                    </div>
+                    {/* right section */}
+                    <div  id="weather-box-right">
+                        <WeatherDataR data={localCityWeather} coordinates={localCityWeather.sendCityCoord}/>
+                    </div>
                 </div>
-                {/* right section */}
-                <div  id="weather-box-right">
-                    <WeatherDataR data={localCityWeather} coordinates={localCityWeather.sendCityCoord}/>
-                </div>
-                
-            </div>
+                <Footer />
+            </div>  
         )}else{
             //get weather api 
             navigator.geolocation.getCurrentPosition(_getCurrentLocation);
