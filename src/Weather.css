@@ -24,7 +24,7 @@ body {
 
 /* search bar */
 #search-form {
-    width: 88%;
+    width: 90%;
     cursor: pointer;
     position: relative;
     margin-top: 16%;
@@ -35,23 +35,23 @@ body {
 }
 #search-form div{
     width: 80%;
-    position:relative;
 }
 #search-bar {
     width: 87%;
-    height: 30px;
+    height: 40px;
     border: 0px;
     outline: none;
     border-radius: 35px;
     background-color: rgba(255, 255, 255, 0.328);
-    font-size: 13px;
+    font-size: 15px;
     padding: 8px 22px;
     box-shadow: 2px 2px 10px 5px rgba(211, 211, 211, 0.297);
 }
 #data-clear-input {
+    width: max-content ;
+    height: max-content;
+    margin: 18px 0 0 -30px;
     position: absolute;
-    top: 15px;
-    right: 16px;
     cursor: pointer;
     display: none;
 }
@@ -60,7 +60,7 @@ body {
     border: 0;
     outline: none;
     background-color: transparent;
-    padding-left: 5%;
+    padding-left: 3%;
 }
 #search-icon {
     color: #48484A;
@@ -427,15 +427,16 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
         width: 80%;
     }
     #search-bar {
-        width: 92%;
-        height: 50px;
-        font-size: 14px;
+        width: 88%;
+        font-size: 18px;
+        padding: 8px 0px 8px 14px;
     }
     #searchBtn-icon {
-        font-size: 24px;
+        font-size: 22px;
+        padding-left: 0%;
     }
     #temp-list {
-    padding-top: 16%;
+        padding-top: 16%;
     }
     #main-temp {
         font-size: 14vw;
@@ -568,19 +569,24 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
     }
     /* search bar */
     #search-form {
-        width: 80%;
+        width: 90%;
         margin-top: 15%;
     }
     #search-bar {
         width: 85%;
         height: 16px;
-        font-size: 11px;
+        font-size: 12px;
+        /* padding: 8px 0px 8px 14px; */
     }
     #searchBtn-icon {
-        padding-left: 20%;
+        padding-left: 3%;
         font-size: 11px;
     }
-
+    #data-clear-input {
+        width: 10px;
+        height: 10px;
+        margin: 8px 0 0 -20px;
+    }
     #weather-left-info {
         width: 100%;
         display: flex;
@@ -659,7 +665,7 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
         padding-top: 0%;
     }
     #weather-box-right-top {
-        padding: 5% 3.5% 0%;
+        padding: 4% 3.5% 0%;
     }
     #brand-logo-name, 
     #weather-detail{
@@ -674,8 +680,7 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
     /* switch */
     .switch-wrapper .moon,
     .switch-wrapper .sun {
-        width: 1.6vw;
-        height: 3.8vh;
+        width: 1.4vw;
     }
     /* 7 days forecast */
     #weather-forecast {
@@ -750,6 +755,7 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
     /* ***************************************** */
     /* mobile first 1200px*/
     @media only screen and (min-width: 1200px) {
+        
         #current-location {
             margin-top: 32%;
         }
@@ -782,11 +788,6 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
             width: 20%;
             font-size: 12px;
         }
-        /* switch */
-        .switch-wrapper .moon,
-        .switch-wrapper .sun {
-            width: 1.8vw;
-        }
         /* 7 days forecast */
         #weather-forecast {
             margin-top: 3%;
@@ -811,12 +812,16 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
             margin-top: 17%;
         }
         #search-bar {
-            height: 28px;
+            width: 88%;
             font-size: 11px;
+            height: 22px;
         }
         #searchBtn-icon {
             font-size: 18px;
-            padding-left: 8%;
+            padding-left: 3%;
+        }
+        #data-clear-input {
+            margin: 11px 0 0 -24px;
         }
         .temp-unit {
             font-size: 1.2vw;
@@ -826,12 +831,13 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
             font-size: 1vw;
         }
         #weather-box-right-top{
-            padding: 7% 3.2% 0%;
+            padding: 5.5% 3.2% 0%;
         }
         .right-top-small-title {
             width: 26%;
             font-size: 16px;
         }
+                
         /* 7 days forecast */
         #weather-forecast {
             gap: 1%;
@@ -847,10 +853,6 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
             padding-top: 8%;
             padding-right: 15%;
         }
-        #weather-temp-max,
-        #weather-temp-min{
-            font-size: 1vw;
-        }
         /* weather detail humidity wind-speed ... */
         /* weather detail */
         #weather-detail {
@@ -864,7 +866,9 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
     /* mobile first 1800px*/
     @media only screen and (min-width: 1800px) {
         #search-bar {
-                height: 38px;
+            height: 24px;
+            font-size: 15px;
+                padding: 8px 0px 8px 14px;
         }
         .detail-icon {
             font-size: 2vw;
@@ -886,11 +890,11 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
         /* weather detail humidity wind-speed ... */
         /* weather detail */
         #weather-box-right {
-            padding-top: 1%;
+            padding-top: 0%;
         }
         .switch-wrapper .moon,
         .switch-wrapper .sun {
-            width: 1.5vw;
+            width: 1.2vw;
         }
         .forecast-seven-day {
             height: 14.5vw;
