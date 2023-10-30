@@ -65,7 +65,15 @@ export default function _weather(){
             sendCityCoord: response.data.coord
             })
     }     
-    
+    function _showXIcon(){
+        let xIcon = document.querySelector("#data-clear-input");
+        xIcon.style.display = "inline"
+
+        xIcon.addEventListener("click",function(e){
+        e.target.previousElementSibling.value = ""
+        xIcon.style.display = "none"
+    })
+    }
     
     if (localCityWeather.triggle) {
         return(
@@ -76,7 +84,7 @@ export default function _weather(){
                     {/* seperate search engine */}
                     <form action="" method="get" id="search-form" onSubmit={_submitForm}>
                         <div>
-                            <input type="text" id="search-bar" placeholder="Search for place"autoComplete="off" onChange={_getSearchValue}/>
+                            <input type="text" id="search-bar" placeholder="Search for place"autoComplete="off" onChange={_getSearchValue} onClick={_showXIcon}/>
                             <span id="data-clear-input">&times;</span>
                         </div>
                         <button id="searchBtn-icon">
