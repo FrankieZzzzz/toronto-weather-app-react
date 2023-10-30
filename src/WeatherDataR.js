@@ -27,11 +27,11 @@ export default function weatherDataR(props){
                     <p className="forecast-detail">Temperature Max | Min</p>
                     <div className="content">
                         <p className="max-min-temp unit">
-                            <span className="material-symbols-outlined"> upgrade </span>:{" "}
+                            <span className="material-symbols-outlined detail-icon"> upgrade </span>:{" "}
                             <span id="forecast-detail-data" className="detail">{props.data.cityTempDayMax}</span>°C
                         </p>
                         <p className="max-min-temp unit">
-                            <span className="material-symbols-outlined" id="minTempUnit">upgrade</span>
+                            <span className="material-symbols-outlined detail-icon" id="minTempUnit">upgrade</span>
                             : <span id="min-temp" className="detail">{props.data.cityTempDayMin}</span>°C
                         </p>
                     </div>
@@ -40,7 +40,7 @@ export default function weatherDataR(props){
                     <p className="forecast-detail">Sunrise & Sunset</p>
                     <div className="content">
                         <p>
-                            <span className="material-symbols-outlined sunriseIcon">
+                            <span className="material-symbols-outlined sunriseIcon detail-icon">
                             {" "}
                             wb_twilight{" "}
                             </span>{" "}
@@ -48,7 +48,7 @@ export default function weatherDataR(props){
                             <span className="timeUnit detail">{props.data.sunRiseTime}</span><span className="unit">AM</span>
                         </p>
                         <p>
-                            <span className="material-symbols-outlined sunsetIcon">
+                            <span className="material-symbols-outlined sunsetIcon detail-icon">
                             {" "}
                             wb_twilight{" "}
                             </span>{" "}

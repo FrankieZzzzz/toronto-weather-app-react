@@ -7,7 +7,7 @@ body {
 }
 .conTainer {
     height: initial;
-    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(207, 214, 231) 90%);
+    background: rgba(255, 255, 255, 0);
     padding: 0px;
     display: block;
     
@@ -132,7 +132,7 @@ body {
 /* weather-box-left-detail */
 .leftSideIcon {
     color: #EC6E4C;
-    padding-bottom: 5%;
+    font-weight: 400;
 }
 #weather-box-left-detail {
     font-size: 18px;
@@ -344,6 +344,7 @@ body {
     justify-content: space-around;
     height: 150px;
     margin: 1.5% 0px;
+    padding: 0px 3%;
 }
 .unit {
     font-weight: 300;
@@ -357,7 +358,7 @@ body {
 .sunsetIcon,#minTempUnit {
     rotate: 180deg;
 }
-.material-symbols-outlined {
+.detail-icon {
     font-size: 5vw;
     position: relative;
     top: 5px;
@@ -381,8 +382,11 @@ body.night .switch-wrapper .moon {
     background-size: 100%
 }
 
-body.night .conTainer,
-body.night #weather-box-right {
+body.night .conTainer{
+    background: rgba(0, 0, 0, 0);
+}
+body.night #weather-box-right,
+body.night #weather-box-left {
     box-shadow: 1px 1px 32px 12px rgba(15, 12, 49, 0.079);
     background: linear-gradient(40deg, rgb(32, 38, 57), rgb(63, 76, 119));
 }
@@ -439,10 +443,6 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
         top: -64px;
         left: 5px;
     }
-    .leftSideIcon {
-        color: #EC6E4C;
-        padding-bottom: 5%;
-    }
     #weather-box-left-detail {
         width: 90%;
         font-size: 17px;
@@ -457,6 +457,10 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
     #weather-box {
         padding-top: 15%;
     }
+        #weather-box canvas {
+            width: 17vw;
+            height: 17vw;
+        }
     #weather-box-left-detail li {
         padding-top: 0px;
         padding-left: 8%;
@@ -496,7 +500,6 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
     .switch-wrapper .moon,
     .switch-wrapper .sun {
         width: 3.5vw;
-        height: 4.8vh;
     }
     /* weather forecast 7 days*/
     #weather-forecast {
@@ -528,7 +531,7 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
     .detail {
         font-size: 5vw;
     }
-    .material-symbols-outlined {
+    .detail-icon {
         font-size: 4vw;
     }
 }
@@ -545,7 +548,7 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
         border-radius: 20px;
         margin: 5% auto 0px auto;
         display: grid;
-    background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(232, 237, 248) 90%);
+        background: radial-gradient(circle at 18.7% 37.8%, rgb(250, 250, 250) 0%, rgb(232, 237, 248) 90%);
         grid-template-columns: 28% 72%;
     }
     /* **************** */
@@ -564,11 +567,11 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
     }
     #search-bar {
         width: 85%;
-        height: 19px;
+        height: 16px;
         font-size: 11px;
     }
     #searchBtn-icon {
-        padding-left: 16%;
+        padding-left: 20%;
         font-size: 11px;
     }
 
@@ -642,7 +645,7 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
         font-size: 2vw;
     }
     #displayImgGalery {
-        height: 9vw;
+        height: 10vw;
     }
     /* rightside box */
     #weather-box-right {
@@ -650,10 +653,10 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
         padding-top: 0%;
     }
     #weather-box-right-top {
-        padding: 5% 3% 0%;
+        padding: 5% 3.5% 0%;
     }
     #brand-logo-name {
-        font-size: 15px;
+        font-size: 1.4vw;
     }
     .right-top-small-title {
         display: block;
@@ -664,15 +667,15 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
     /* switch */
     .switch-wrapper .moon,
     .switch-wrapper .sun {
-        width: 1.5vw;
-        height: 4.8vh;
+        width: 1.6vw;
+        height: 3.8vh;
     }
     /* 7 days forecast */
     #weather-forecast {
-        margin-top: 5%;
+        margin-top: 3%;
         grid-template-columns: repeat(8, 11%);
         gap: 0.7%;
-        margin-bottom: 4%;
+        margin-bottom: 6%;
     }
     .forecast-seven-day {
         flex-direction: column;
@@ -683,15 +686,16 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
         flex-direction: column;
         align-items: center;
         padding: 0px;
+        font-weight: 400;
     }
     #forecast-seven-day-detail>p {
         margin-bottom: 15px;
         padding-right: 0%;
-        font-size: 1.6vw;
+        font-size: 1.4vw;
     }
     #weather-forecast-temp{
-        padding-top:15%;
-        font-size: 1.4vw;
+        padding-top:22%;
+        font-size: 1vw;
     }
     #weather-temp-max,
     #weather-temp-min {
@@ -700,8 +704,8 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
     /* weather detail humidity wind-speed ... */
     /* weather detail */
     #weather-detail {
-        margin: 0px 0px 3% 5%;
-        font-size: 15px;
+        margin: 0px 0px 3% 4%;
+        font-size: 1.4vw;
     }
     .weather-detail-list {
         width: 95%;
@@ -710,13 +714,13 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
     }
     .forecast-detail {
         font-size: 1.4vw;
-        font-weight: 250;
+        font-weight: 400;
     }
     .forecast-day {
         flex-direction: column;
         align-items: start;
         justify-content: start;
-        height: 140px;
+        height: 13vw;
         margin: 1.5% 3px;
         padding: 8% 0% 0% 8%;
     }
@@ -734,7 +738,7 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
         font-size: 2.8vw;
         font-weight: 100;
     }
-    .material-symbols-outlined {
+    .detail-icon {
         font-weight: 200;
         font-size: 3vw;
     }
@@ -782,18 +786,18 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
         /* 7 days forecast */
         #weather-forecast {
             margin-top: 3%;
-            grid-template-columns: repeat(8, 11%);
+            grid-template-columns: repeat(8, 10.8%);
             gap: 1%;
         }
         .forecast-seven-day {
             padding: 15% 5px;
-            height: 220px;
+            height: 14vw;
         }
         #weather-temp-max,
         #weather-temp-min {
             font-size: 1vw;
         }
-        .material-symbols-outlined {
+        .detail-icon {
             font-size: 2.5vw;
         }
     }
@@ -818,7 +822,7 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
             font-size: 14px;
         }
         #weather-box-right-top{
-            padding: 7% 2% 0%;
+            padding: 7% 3.2% 0%;
         }
         #brand-logo-name {
             font-size: 22px;
@@ -830,7 +834,6 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
 
         /* 7 days forecast */
         #weather-forecast {
-            grid-template-columns: repeat(8, 11%);
             gap: 1%;
             margin-top: 3%;
         }
@@ -853,7 +856,7 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
         /* weather detail */
         #weather-detail {
             font-size: 1.6vw;
-            margin: 2% auto;
+            margin: 0px 0px 3% 4%;
         }
         .forecast-day {
             height: 13vw;
@@ -868,8 +871,14 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
         #search-bar {
                 height: 47px;
         }
-        .material-symbols-outlined {
+        .detail-icon {
             font-size: 2vw;
+        }
+        #weather-box-left-detail li{
+            margin-bottom: 4%;
+        }
+        #weather-box-left-detail li span{
+            font-size: 1vw;
         }
         #insertCityName {
             font-size: 1.5vw;
@@ -883,13 +892,19 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
         #weather-box-right {
             padding-top: 1.4%;
         }
+        .switch-wrapper .moon,
+        .switch-wrapper .sun {
+            width: 1.5vw;
+        }
+        #weather-detail{
+            font-size: 1.3vw;
+
+        }
         .forecast-seven-day {
-                height: 13vw;
+                height: 14vw;
             }
         .forecast-day {
-            height: 9.5vw;
+            height: 11vw;
         }
-        
     }
-
     }
