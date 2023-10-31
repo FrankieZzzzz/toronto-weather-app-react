@@ -26,7 +26,7 @@ export default function WeatherDataL(props){
                 <li>
                     <span className="material-symbols-outlined leftSideIcon"> calendar_month </span>
                     <span>
-                        <MomentTime date="MMMM Do YYYY" time="h:mm:ss A"/>
+                        <MomentTime date="MMM Do YY" time="h:mm:ss A"/>
                     </span>
                 </li>
             </ul>
