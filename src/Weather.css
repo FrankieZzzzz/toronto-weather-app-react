@@ -37,7 +37,7 @@ body {
     width: 80%;
 }
 #search-bar {
-    width: 87%;
+    width: 90%;
     height: 35px;
     border: 0px;
     outline: none;
@@ -60,7 +60,7 @@ body {
     border: 0;
     outline: none;
     background-color: transparent;
-    padding-left: 3%;
+    padding-left: 1%;
 }
 #search-icon {
     color: #48484A;
