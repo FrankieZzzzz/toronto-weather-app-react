@@ -36,14 +36,10 @@ body {
 #search-form div{
     width: 80%;
 }
-/* .search-bar-shadow {
-    box-shadow: 2px 2px 10px 5px rgba(211, 211, 211, 0.361);
-    -webkit-box-shadow:2px 2px 10px 5px rgba(211, 211, 211, 0.361);
-} */
 .search-bar {
     width: 90%;
     height: 35px;
-    border: 3px solid rgba(211, 211, 211, 0.22);
+    border: 3px solid rgba(211, 211, 211, 0.321);
     outline: none;
     border-radius: 35px;
     background: rgba(255, 255, 255, 0);
@@ -56,7 +52,7 @@ body {
 #data-clear-input {
     width: max-content ;
     height: max-content;
-    margin: 16px 0 0 -30px;
+    margin: 20px 0 0 -30px;
     position: absolute;
     cursor: pointer;
     display: none;
@@ -400,6 +396,9 @@ body.night #weather-box-left {
 }
 body.night .footer{
     background: rgba(255, 255, 255, 0);
+}
+body.night .search-bar{
+    border: none;
 }
 body.night .conTainer #weather-box-left #search-form input,
 body.night .conTainer #weather-box-left #current-location #current-city,
