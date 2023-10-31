@@ -87,7 +87,7 @@ export default function _weather(){
                         {/* seperate search engine */}
                         <form action="" method="get" id="search-form" onSubmit={_submitForm}>
                             <div>
-                                <input type="text" id="search-bar" placeholder="Search for place"autoComplete="off" onChange={_getSearchValue} onClick={_showXIcon}/>
+                                <input type="text" className="search-bar search-bar-shadow" placeholder="Search for place"autoComplete="off" onChange={_getSearchValue} onClick={_showXIcon}/>
                                 <span id="data-clear-input">&times;</span>
                             </div>
                             <button id="searchBtn-icon">
