@@ -36,19 +36,23 @@ body {
 #search-form div{
     width: 80%;
 }
+.search-bar-shadow {
+    box-shadow: 2px 2px 10px 5px rgba(211, 211, 211, 0.361);
+    -webkit-box-shadow:2px 2px 10px 5px rgba(211, 211, 211, 0.361);
+    /* filter: drop-shadow(5px 5px 10px rgb(211, 211, 211)) */
+}
 .search-bar {
     width: 90%;
     height: 35px;
     border: none;
     outline: none;
     border-radius: 35px;
-    background-color: rgba(255, 255, 255, 0.328);
+    background: rgba(255, 255, 255, 0);
     font-size: 15px;
     padding: 8px 5px 8px 14px;
+    
 }
-.search-bar-shadow{
-    box-shadow: 2px 2px 10px 5px rgba(211, 211, 211, 0.297);
-}
+
 #data-clear-input {
     width: max-content ;
     height: max-content;
