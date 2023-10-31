@@ -701,7 +701,7 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
     .forecast-seven-day {
         flex-direction: column;
         padding: 12% 3px;
-        height: 14vw;
+        height: 10vw;
     }
     #forecast-seven-day-detail {
         flex-direction: column;
@@ -853,7 +853,7 @@ body.night .conTainer #weather-box-right .weather-detail-list .forecast-day {
             margin-top: 3%;
         }
         .forecast-seven-day {
-            height: 11vw;
+            height: 9vw;
             padding: 10px 5px;
 
         }
