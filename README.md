@@ -15,12 +15,13 @@ Welcome to my Toronto Weather App, my first React project! This app provides you
 - **City Photos**: Cityscape photos sourced from [Unsplash API](https://unsplash.com/).
 - **Time Management**: Accurate time is displayed with the help of [Moment.js](https://momentjs.com/).
 
-## Technologies Used 🛠️
+## Technologies / Tool Used 🛠️
 - React
 - HTML & CSS
 - Open Weather API
 - Unsplash API
 - Moment.js
+- Figma
 
 ## Try It Out 🚀
 To see the app in action, visit [Toronto Weather App]([https://toronto-weather-app-react.netlify.app/]( https://toronto-weather-app-react.netlify.app/ ). 
